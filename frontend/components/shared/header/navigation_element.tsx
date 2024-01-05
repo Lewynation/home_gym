@@ -11,11 +11,11 @@ type navigationElementsProps = {
 };
 
 const buttonVariants = cva(
-  "font-redHat hover:text-primary transition-all duration-200",
+  "font-redHat hover:text-primaryColor transition-all duration-200",
   {
     variants: {
       active: {
-        true: "text-primary",
+        true: "text-primaryColor",
         false: "text-white",
       },
     },

@@ -20,7 +20,7 @@ const HomeLanding = () => {
             fullest all at home.
           </p>
         </div>
-        <button className="bg-primary text-black px-3 py-2 group border-tertiary border-2">
+        <button className="bg-primaryColor text-black px-3 py-2 group border-tertiaryColor border-2">
           <div className="flex gap-3 items-center">
             <p className="font-redHat font-bold">Get Started</p>
             <ArrowRight

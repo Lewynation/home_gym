@@ -40,7 +40,7 @@ const pricingCardCheckIconVariants = cva("stroke-2", {
     type: {
       preferActive: "text-white",
       preferInactive: "text-[#c1e66f]",
-      notPreferActive: "text-primary",
+      notPreferActive: "text-primaryColor",
       notPreferInactive: "text-[#465828]",
     },
   },

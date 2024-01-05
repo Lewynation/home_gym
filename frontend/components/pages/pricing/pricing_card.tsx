@@ -8,7 +8,7 @@ import { type VariantProps, cva } from "class-variance-authority";
 const pricingCardVariants = cva(" px-12 py-12 flex flex-col gap-5 border-2", {
   variants: {
     prefered: {
-      true: "bg-primary border-primary",
+      true: "bg-primaryColor border-primaryColor",
       false: "bg-[#1d2120] border-[#1d2120]",
     },
   },
@@ -75,7 +75,7 @@ const SinglePricingCard: React.FC<PricingCardProps> = ({
           })}
         </ul>
       </div>
-      <button className="bg-white flex items-center justify-center my-8 text-black px-3 py-2 group border-tertiary border-2 hover:bg-primary transiti duration-200">
+      <button className="bg-white flex items-center justify-center my-8 text-black px-3 py-2 group border-tertiaryColor border-2 hover:bg-primaryColor transiti duration-200">
         <div className="flex gap-3 items-center">
           <p className="font-redHat font-bold">Purchase Now</p>
           <ArrowRight

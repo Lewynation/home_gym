@@ -21,7 +21,7 @@ const BMICalculationSection = () => {
         </div>
         <div className="flex flex-col gap-y-8">
           <div className="flex gap-4">
-            <div className="flex gap-4 px-3 py-4 border-2 border-tertiary">
+            <div className="flex gap-4 px-3 py-4 border-2 border-tertiaryColor">
               <input
                 type="number"
                 placeholder="Height"
@@ -29,7 +29,7 @@ const BMICalculationSection = () => {
               />
               <p className="font-redHat text-white ">cm</p>
             </div>
-            <div className="flex gap-4 px-3 py-4 border-2 border-tertiary">
+            <div className="flex gap-4 px-3 py-4 border-2 border-tertiaryColor">
               <input
                 type="number"
                 placeholder="Weight"
@@ -39,7 +39,7 @@ const BMICalculationSection = () => {
             </div>
           </div>
           <div className="w-full">
-            <button className="bg-primary w-full text-black px-3 py-4 flex items-center justify-center group border-tertiary border-2">
+            <button className="bg-primaryColor w-full text-black px-3 py-4 flex items-center justify-center group border-tertiaryColor border-2">
               <div className="flex gap-3 items-center">
                 <p className="font-redHat font-bold">Calculate Now</p>
                 <ArrowRight

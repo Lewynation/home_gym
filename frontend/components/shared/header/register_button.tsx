@@ -10,7 +10,7 @@ const registerButtonVariants = cva(
   {
     variants: {
       scrolledFromTop: {
-        true: "bg-primary text-black border-tertiary",
+        true: "bg-primaryColor text-black border-tertiaryColor",
         false: "bg-white text-black border-white",
       },
     },

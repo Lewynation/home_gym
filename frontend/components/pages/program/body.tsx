@@ -7,7 +7,7 @@ const ProgramBody = () => {
   return (
     <div>
       <div className="flex items-center justify-center flex-col ">
-        <h1 className="font-kaushanScript text-primary text-3xl mt-10 mb-5 -rotate-3">
+        <h1 className="font-kaushanScript text-primaryColor text-3xl mt-10 mb-5 -rotate-3">
           Our Program
         </h1>
         <h2 className="uppercase font-redHat text-5xl">
@@ -41,8 +41,8 @@ const ProgramItem: React.FC<ProgramItemProps> = ({
   title,
 }) => {
   return (
-    <div className="bg-[#1d2120] px-8 py-8 flex flex-col gap-5 group hover:bg-primary border-2 border-[#1d2120] hover:border-tertiary transition-all duration-500">
-      <div className="w-12 h-12 rounded-full group-hover:bg-tertiary flex items-center justify-center transition-all duration-500">
+    <div className="bg-[#1d2120] px-8 py-8 flex flex-col gap-5 group hover:bg-primaryColor border-2 border-[#1d2120] hover:border-tertiaryColor transition-all duration-500">
+      <div className="w-12 h-12 rounded-full group-hover:bg-tertiaryColor flex items-center justify-center transition-all duration-500">
         <Image src={image} alt="buildIcon" className="w-8 object-cover" />
       </div>
       <div>

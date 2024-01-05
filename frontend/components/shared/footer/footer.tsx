@@ -27,7 +27,7 @@ const Footer = () => {
       </div>
       <div className="flex justify-between mb-12">
         <div>
-          <p className="font-redHat text-secondary text-xs">
+          <p className="font-redHat text-secondaryColor text-xs">
             &#169; Copyright HOME GYM EQUIPMENT 2024. All rights reserved.
           </p>
         </div>
@@ -61,7 +61,7 @@ const FooterNavContents: React.FC<FooterNavProps> = ({ contents, title }) => {
         {contents.map((content, index) => (
           <li
             key={index}
-            className="text-secondary cursor-pointer hover:text-primary transition-all duration-100"
+            className="text-secondaryColor cursor-pointer hover:text-primaryColor transition-all duration-100"
           >
             {content.title}
           </li>
@@ -78,7 +78,7 @@ interface FooterSocialIconProps {
 
 const FooterSocialIcon: React.FC<FooterSocialIconProps> = ({ Icon, link }) => {
   return (
-    <div className="rounded-full w-8 h-8 bg-primary flex items-center justify-center cursor-pointer">
+    <div className="rounded-full w-8 h-8 bg-primaryColor flex items-center justify-center cursor-pointer">
       <Icon className="" size={20} />
     </div>
   );

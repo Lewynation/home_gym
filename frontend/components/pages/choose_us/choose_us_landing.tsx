@@ -17,7 +17,7 @@ const ChooseUsLanding = () => {
       </div>
       <div className="flex flex-col gap-y-14">
         <div className="flex items-start justify-center flex-col ">
-          <h1 className="font-kaushanScript text-primary text-3xl mt-10 mb-5 -rotate-3">
+          <h1 className="font-kaushanScript text-primaryColor text-3xl mt-10 mb-5 -rotate-3">
             We Are The Best
           </h1>
           <h2 className="uppercase font-redHat text-5xl">

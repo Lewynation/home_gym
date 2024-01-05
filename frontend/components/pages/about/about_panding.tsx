@@ -8,7 +8,7 @@ const AboutLanding = () => {
   return (
     <div>
       <div className="flex items-center justify-center flex-col ">
-        <h1 className="font-kaushanScript text-primary text-3xl mt-10 mb-5 -rotate-3">
+        <h1 className="font-kaushanScript text-primaryColor text-3xl mt-10 mb-5 -rotate-3">
           About
         </h1>
         <h2 className="uppercase font-redHat text-5xl">
