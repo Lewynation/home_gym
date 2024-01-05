@@ -1,1 +1,1 @@
-export * from "./home/header"
+export * from "../shared/header/header"
