@@ -14,7 +14,7 @@ env:
   IMAGE_NAME: ${{ github.repository }}
 
 concurrency:
-  group: "${{ github.workflow }}-${{ github.ref }}-db-migrator"
+  group: "${{ github.workflow }}-${{ github.ref }}--db-migrator"
   cancel-in-progress: true
 
 jobs:

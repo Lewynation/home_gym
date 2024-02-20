@@ -15,7 +15,7 @@ env:
   IMAGE_NAME: ${{ github.repository }}
 
 concurrency:
-  group: "${{ github.workflow }}-${{ github.ref }}-frontend"
+  group: "${{ github.workflow }}-${{ github.ref }}--frontend"
   cancel-in-progress: true
 
 jobs:
