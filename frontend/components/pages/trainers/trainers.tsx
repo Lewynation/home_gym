@@ -3,7 +3,7 @@ import React from "react";
 import TrainerListItem from "./trainer_list_item";
 import prisma from "../../../prisma/client";
 
-const TrainersBody = async () => {
+async function getTrainers() {
   const trainers = await prisma.trainer.findMany({
     select: {
       id: true,
@@ -21,6 +21,24 @@ const TrainersBody = async () => {
     },
     take: 10,
   });
+  return trainers;
+}
+
+const TrainersBody = async () => {
+  const trainers = (await getTrainers()) as {
+    id: string;
+    serialNo: number;
+    name: string;
+    phoneNumber: string | null;
+    email: string | null;
+    location: string | null;
+    bio: string | null;
+    servicesOffered: string[];
+    availability: string | null;
+    rates: string | null;
+    credentials: string[];
+    experience: string | null;
+  }[];
   return (
     <div>
       <div className="flex items-center justify-center flex-col ">
