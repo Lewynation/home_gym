@@ -2,7 +2,7 @@ name: Publish database migrator
 
 on:
   push:
-    branches: ["main"]
+    branches: ["master"]
     paths-ignore:
       - "backend/**"
       - ".vscode/**"
