@@ -2,7 +2,7 @@ name: Publish socket backend
 
 on:
   push:
-    branches: ["main"]
+    branches: ["master"]
     paths-ignore:
       - "backend/**"
       - ".vscode/**"
