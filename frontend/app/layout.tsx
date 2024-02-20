@@ -5,9 +5,10 @@ import {
   Red_Hat_Display,
   Kaushan_Script,
 } from "next/font/google";
-import { getServerSession } from "next-auth";
 import "./globals.css";
 import SessionProvider from "@/components/shared/session_provider/session_provider";
+import { Toaster } from "@/components/ui/toaster";
+import { auth } from "@/auth";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -39,14 +40,17 @@ export default async function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
-  const session = await getServerSession();
+  const session = await auth();
   return (
     <html
       lang="en"
       className={`${assistant.variable}, ${red_hat_display.variable}, ${kaushan_script.variable}`}
     >
       <body className={inter.className}>
-        <SessionProvider session={session}>{children}</SessionProvider>
+        <SessionProvider session={session}>
+          <main>{children}</main>
+          <Toaster />
+        </SessionProvider>
       </body>
     </html>
   );

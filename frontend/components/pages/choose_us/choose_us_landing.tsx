@@ -4,7 +4,7 @@ import barbel from "@/assets/images/barbell.jpg";
 
 const ChooseUsLanding = () => {
   return (
-    <div className="grid grid-cols-2 gap-20 mb-28">
+    <div className="grid grid-cols-2 gap-4 md:gap-20 mb-28 pr-5 md:pr-0">
       <div className="flex justify-center relative overflow-hidden">
         <div className="triangle-path absolute bg-[#9dd02f] bottom-0 -top-28 left-0 w-full "></div>
         <div className="triangle-path absolute bg-[#a3d733] left-0 w-[405px] bottom-0 -top-28 "></div>
@@ -17,10 +17,10 @@ const ChooseUsLanding = () => {
       </div>
       <div className="flex flex-col gap-y-14">
         <div className="flex items-start justify-center flex-col ">
-          <h1 className="font-kaushanScript text-primaryColor text-3xl mt-10 mb-5 -rotate-3">
+          <h1 className="font-kaushanScript text-primaryColor text-3xl mt-10 mb-5 -rotate-3 text-left">
             We Are The Best
           </h1>
-          <h2 className="uppercase font-redHat text-5xl">
+          <h2 className="uppercase font-redHat text-3xl md:text-6xl">
             <span className="font-outline-2">Why</span>{" "}
             <span className="text-white font-bold">choose us</span>
           </h2>

@@ -1,0 +1,73 @@
+version: "3"
+services:
+  frontend:
+    container_name: gym-frontend
+    depends_on:
+      - postgres
+      - backend
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    networks:
+      - gym_network
+    ports:
+      - "3000:3000"
+    environment:
+      - DATABASE_URL=postgresql://root:root@pg:5432/home_gym?schema=public
+      - NEXTAUTH_URL=http://localhost:3000
+      - NEXTAUTH_SECRET=secret
+      - GOOGLE_CLIENT_ID=
+      - GOOGLE_CLIENT_SECRET=
+      # - MPESA
+      - MPESA_BUSINESS_SHORT_CODE=
+      - MPESA_TRANSACTION_TYPE=CustomerPayBillOnline
+      - MPESA_CALLBACK_BASE_URL=http://localhost:3000/api/payments
+      - MPESA_PASSKEY=
+      - MPESA_STK_PUSH_URL=https://sandbox.safaricom.co.ke/mpesa/stkpush/v1/processrequest
+      - MPESA_CONSUMER_KEY=
+      - MPESA_CONSUMER_SECRET=
+      - MPESA_AUTH_URL=https://sandbox.safaricom.co.ke/oauth/v1/generate?grant_type=client_credentials
+      # - callback socket gateway
+      - SOCKET_GATEWAY_WEBHOOk_URL=http://gym-backend:3001/webhook/payments
+  backend:
+    container_name: gym-backend
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    networks:
+      - gym_network
+    ports:
+      - "3001:3001"
+
+  postgres:
+    container_name: pg
+    image: postgres:latest
+    restart: always
+    networks:
+      - gym_network
+    environment:
+      POSTGRES_USER: root
+      POSTGRES_PASSWORD: root
+      POSTGRES_DB: test_db
+    volumes:
+      - /data/postgres:/data/postgres
+    ports:
+      - "5432:5432"
+
+  pgadmin:
+    container_name: pgadmin
+    image: dpage/pgadmin4
+    restart: always
+    networks:
+      - gym_network
+    environment:
+      PGADMIN_DEFAULT_EMAIL: root@root.com
+      PGADMIN_DEFAULT_PASSWORD: root
+    volumes:
+      - /data/pgadmin:/root/.pgadmin
+    ports:
+      - "5050:80"
+
+networks:
+  gym_network:
+    external: true

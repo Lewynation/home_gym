@@ -1,0 +1,18 @@
+version: "3"
+services:
+  database_migrator:
+    container_name: database-migrator
+    build:
+      context: .
+      dockerfile: Dockerfile
+    environment:
+      - DATABASE_URL="postgresql://root:root@pg:5432/home_gym?schema=public"
+    networks:
+      - gym_network
+    command: sh
+    stdin_open: true
+    tty: true
+
+networks:
+  gym_network:
+    external: true

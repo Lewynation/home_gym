@@ -16,6 +16,10 @@ export const navElements = [
     href: "/about-us",
   },
   {
+    name: "Trainers",
+    href: "/trainers",
+  },
+  {
     name: "Featured Items",
     href: "/featured-items",
   },

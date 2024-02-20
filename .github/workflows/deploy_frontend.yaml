@@ -1,0 +1,54 @@
+name: Publish frontend website
+
+on:
+  push:
+    branches: ["main"]
+    paths-ignore:
+      - "backend/**"
+      - ".vscode/**"
+      - ".github/workflows/deploy_database_migrator.yml"
+      - ".github/workflows/deploy_socket_backend.yml"
+      - "database_migrator/**"
+
+env:
+  REGISTRY: ghcr.io
+  IMAGE_NAME: ${{ github.repository }}
+
+concurrency:
+  group: "${{ github.workflow }}-${{ github.ref }}-frontend"
+  cancel-in-progress: true
+
+jobs:
+  build-and-push-image:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      packages: write
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Log in to the Container registry
+        uses: docker/login-action@v1
+        with:
+          registry: ${{ env.REGISTRY }}
+          username: ${{ github.actor }}
+          password: ${{ secrets.GHCR_LOGIN_TOKEN }}
+
+      - name: Extract metadata (tags, labels) for Docker
+        id: meta
+        uses: docker/metadata-action@v4
+        with:
+          images: ghcr.io/lewynation/gym_frontend
+          tags: |
+            type=ref,event=branch
+            type=sha
+      - name: Build and push Docker image
+        uses: docker/build-push-action@v4
+        with:
+          context: ./frontend
+          file: Dockerfile
+          push: true
+          tags: ${{ steps.meta.outputs.tags }}
+          labels: ${{ steps.meta.outputs.labels }}

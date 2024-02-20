@@ -8,14 +8,14 @@ import Link from "next/link";
 const Footer = () => {
   return (
     <div>
-      <div className="flex justify-between text-white mb-28">
+      <div className="grid grid-cols-1 gap-y-10 md:gap-y-0 md:flex md:justify-between text-white mb-28 px-5 md:px-0">
         <Link href="/">
           <div className="flex gap-2 items-center font-redHat font-bold">
             <Image src={mainIcon} alt="MainIcon" className="w-7 h-7" />
             <h1>HOME GYM EQUIPMENT</h1>
           </div>
         </Link>
-        <div className="flex gap-16 ">
+        <div className="grid grid-cols-1 gap-y-6 md:gap-y-0 md:flex md:gap-16 ">
           {footerElements.map((footerElement, index) => (
             <FooterNavContents
               key={index}
@@ -25,13 +25,13 @@ const Footer = () => {
           ))}
         </div>
       </div>
-      <div className="flex justify-between mb-12">
+      <div className="flex justify-between mb-12 gap-x-2 px-5 md:px-0">
         <div>
           <p className="font-redHat text-secondaryColor text-xs">
             &#169; Copyright HOME GYM EQUIPMENT 2024. All rights reserved.
           </p>
         </div>
-        <div className="flex gap-6">
+        <div className="flex gap-x-3 md:gap-6">
           {footerSocials.map((footerSocial, index) => (
             <FooterSocialIcon
               key={index}

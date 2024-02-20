@@ -6,12 +6,12 @@ import SingleAboutElement from "./single_about_item";
 
 const AboutLanding = () => {
   return (
-    <div>
+    <div className="px-5 md:px-0">
       <div className="flex items-center justify-center flex-col ">
         <h1 className="font-kaushanScript text-primaryColor text-3xl mt-10 mb-5 -rotate-3">
           About
         </h1>
-        <h2 className="uppercase font-redHat text-5xl">
+        <h2 className="uppercase font-redHat text-5xl text-center">
           <span className="font-outline-2">Learn more</span>{" "}
           <span className="text-white font-bold">about us</span>
         </h2>
@@ -44,6 +44,7 @@ const AboutLanding = () => {
           fitness companies who are leaving quite an indelible mark in the home
           fitness market.
           <br />
+          <br />
           Current market trends led to the spike in demand for at-home fitness
           equipment and the profits of workout companies. With the emergence of
           a budding ecosystem that includes customers, service and workout
@@ -52,7 +53,7 @@ const AboutLanding = () => {
           Let’s have a look at the factors revolutionizing the industry.
         </p>
       </div>
-      <div className="grid grid-cols-3 gap-12 my-28">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-y-10 md:gap-y-0 gap-12 my-28">
         {aboutElements.map(({ description, image, title }, index) => (
           <SingleAboutElement
             description={description}

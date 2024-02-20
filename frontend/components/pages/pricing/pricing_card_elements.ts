@@ -8,6 +8,7 @@ export const pricingCardElements = [
     price: "Ksh 2,000",
     prefered: false,
     image: dumbellIcon,
+    tierId: 1,
     items: [
       {
         item: "5 Days In A Week",
@@ -36,6 +37,7 @@ export const pricingCardElements = [
     price: "Ksh 5,000",
     image: cardioIcon,
     prefered: true,
+    tierId: 2,
     items: [
       {
         item: "5 Days In A Week",
@@ -62,6 +64,7 @@ export const pricingCardElements = [
   {
     title: "Bazuu",
     price: "Ksh 10,000",
+    tierId: 3,
     image: buildIcon,
     prefered: false,
     items: [
