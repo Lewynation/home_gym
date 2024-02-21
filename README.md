@@ -1,6 +1,10 @@
+
+https://github.com/Lewynation/home_gym/assets/87381730/be319bcf-5d62-4780-8803-6c959546090b
 # Home Gym Demo
 
-<video src='./video/home_gym_demo.mp4' width=100%></>
+
+https://github.com/Lewynation/home_gym/assets/87381730/4fdcfb7e-3d88-4b68-b426-3bd44fc59c86
+
 
 ### NOTE:
 
