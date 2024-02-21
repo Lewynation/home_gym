@@ -24,8 +24,8 @@ interface Props {
   trainerId: string;
 }
 
-// const API_URL = "http://localhost:6061/api";
-const API_URL = "https://gym.ocluse.com/api";
+const API_URL = "http://localhost:6061/api";
+// const API_URL = "https://gym.ocluse.com/api";
 
 const SingleTrainer: React.FC<Props> = ({ trainerId }) => {
   const session = useSession();
