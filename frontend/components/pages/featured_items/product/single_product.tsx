@@ -13,8 +13,8 @@ interface Props {
   productId: string;
 }
 
-const API_URL = "http://localhost:6061/api";
-// const API_URL = "https://gym.ocluse.com/api";
+// const API_URL = "http://localhost:6061/api";
+const API_URL = "https://gym.ocluse.com/api";
 
 const SingleProduct: React.FC<Props> = ({ productId }) => {
   const session = useSession();

@@ -11,7 +11,7 @@ services:
     networks:
       - gym_network
     ports:
-      - "3000:3000"
+      - "3000:6061"
     environment:
       - DATABASE_URL=postgresql://root:root@pg:5432/home_gym?schema=public
       - NEXTAUTH_URL=http://localhost:3000
@@ -50,7 +50,7 @@ services:
       POSTGRES_PASSWORD: root
       POSTGRES_DB: test_db
     volumes:
-      - /data/postgres:/data/postgres
+      - ./volumes/postgres:/var/lib/postgresql/data
     ports:
       - "5432:5432"
 
