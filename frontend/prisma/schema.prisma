@@ -9,7 +9,7 @@ datasource db {
   provider = "postgresql"
   // url      = env("DATABASE_URL")
   url      = "postgresql://root:root@pg:5432/home_gym?schema=public"
-  // url      = "postgresql://root:root@localhost:5432/home_gym?schema=public&connect_timeout=300"
+  // url      = "postgresql://root:root@localhost:5432/home_gym?schema=public"
 }
 
 model Account {
@@ -47,7 +47,7 @@ model User {
   image              String?
   subscriptionExpiry DateTime?
   address            String?
-  phoneNumber        String?               @unique
+  phoneNumber        String?
   height             Float?
   weight             Float?
   accounts           Account[]

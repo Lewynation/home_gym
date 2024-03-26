@@ -47,7 +47,7 @@ model User {
   image              String?
   subscriptionExpiry DateTime?
   address            String?
-  phoneNumber        String?               @unique
+  phoneNumber        String?
   height             Float?
   weight             Float?
   accounts           Account[]
